@@ -1,4 +1,4 @@
-function [J,grad] = logCostFunReg(theta,X,y,lambda)
+function [J,grad] = logCostFunReg(X,y,theta,lambda)
 %Computes the cost function and gradient for logistic regression with regularization
     
 %Variables:

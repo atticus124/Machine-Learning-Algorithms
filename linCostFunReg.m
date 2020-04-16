@@ -1,4 +1,4 @@
-function [J,grad] = linCostFunReg(theta,X,y,lambda)
+function [J,grad] = linCostFunReg(X,y,theta,lambda)
 %Computes the cost function and gradient for logistic regression with regularization
     
 %Variables:
@@ -19,8 +19,8 @@ function [J,grad] = linCostFunReg(theta,X,y,lambda)
     
     m = length(y); % number of training example
     
-    d=X*theta;
+    d=X*theta-y;
     modtheta=[0; theta(2:end)];
-    J=(1/(2*m))*d*d'+(lambda/(2*m))*modtheta'*modtheta;
+    J=(1/(2*m))*d'*d+(lambda/(2*m))*modtheta'*modtheta;
     grad = (1/m)*X'*(X*theta-y) +(lambda/m)*modtheta;
 end
