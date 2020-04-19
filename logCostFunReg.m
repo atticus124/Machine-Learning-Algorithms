@@ -2,10 +2,13 @@ function [J,grad] = logCostFunReg(X,y,theta,lambda)
 %Computes the cost function and gradient for logistic regression with regularization
     
 %Variables:
-%          theta: vector with paraemters for logistic regression
 %          X:matrix with training examples; example i in row i
+%                 NOTE: we assume that X has been prepended with a column of 1s
 %          y: vector with output for training example i in row i
+%          theta: vector with parameters for logistic regression
 %          lambda: regularization parameter
+    
+    
     
 %Output:
 %          J= cost     
