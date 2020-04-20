@@ -91,7 +91,7 @@ function [J grad] = nnCostFunction(Theta_unrolled,...
         grad = [((delta*A')/m + (lambda/m)*modTheta)(:);grad];
 
         if i != 1
-            delta = (Theta'*delta)(2:end,:).*sigmoidGradient(Z);
+            delta = (Theta'*delta)(2:end,:).*sigmoidDeriv(Z);
         end    
     end
 end
