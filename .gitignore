@@ -1,2 +1,8 @@
 *~
 *.txt
+fmincg.m
+*.mat
+checkNN*
+debug*
+ex*
+sigmoidG*
