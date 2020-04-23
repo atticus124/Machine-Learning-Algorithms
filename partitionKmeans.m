@@ -2,6 +2,8 @@ function [centroids, closest_centroid] = partitionKmeans(X,K,max_iters)
 %Variables:
 %          X: matrix of data points; each row a data point
 %          K: number of partions
+%          max_iters: max number of iterations; will run until convergence
+%                     if no value is passed or if the number passed is 0
     
 %Output:
 %          centroids: matrix of centroids; each row is a centroid
